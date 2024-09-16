@@ -19,5 +19,6 @@
   .App__content {
     max-width: 360px;
     height: 400px;
+    padding: 0;
   }
 }

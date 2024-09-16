@@ -4,7 +4,7 @@
   top: 30px;
   left: 104px;
   gap: 0px;
-  font-family: "Roboto-Slab", Arial, sans-serif;
+  font-family: "Roboto-Slab";
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
@@ -15,6 +15,10 @@
   text-decoration: none;
   cursor: pointer;
   border: none;
+}
+
+.navigation__logo-link {
+  text-decoration: none;
 }
 
 .navigation {
@@ -68,4 +72,40 @@
   font-size: 18px;
   line-height: 24px;
   font-weight: 500;
+}
+
+.navigation__button_menu {
+  background: transparent url(../../assets/images/mobile_menu_icon.svg);
+  display: block;
+  background-size: cover;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  border: none;
+  cursor: pointer;
+}
+@media screen and (min-device-width: 360px) and (max-device-width: 768px) {
+}
+
+@media screen and (max-device-width: 360px) {
+  .navigation {
+    align-items: center;
+    height: 56px;
+  }
+  .navigation__button-container {
+    visibility: hidden;
+  }
+
+  .navigation__logo-text {
+    width: 117px;
+    height: 24px;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    padding: 0 0 0 16px;
+    margin: 0;
+  }
 }

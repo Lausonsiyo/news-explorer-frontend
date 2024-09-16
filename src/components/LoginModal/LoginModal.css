@@ -1,0 +1,36 @@
+.modal__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__label {
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.52px;
+  text-align: left;
+  color: rgba(47, 113, 229, 1);
+  margin-bottom: 9px;
+  margin-left: 1px;
+}
+
+.modal__input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin-bottom: 31px;
+}
+
+.modal__input:last-of-type {
+  margin-bottom: 39px;
+}
+
+@media screen and (max-device-width: 360px) {
+  .modal__type_loginModal {
+    align-items: flex-end;
+  }
+
+  .modal__content_type_loginModal {
+    border-radius: 20px 20px 0 0;
+  }
+}

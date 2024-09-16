@@ -3,11 +3,12 @@ import "./Navigation.css";
 
 /* REACT IMPORTS  */
 import { NavLink } from "react-router-dom";
+import MediaQuery from "react-responsive";
 
-function Navigation({ handleOpenLoginModal }) {
+function Navigation({ handleOpenLoginModal, handleOpenMobileMenuModal }) {
   return (
     <div className="navigation">
-      <NavLink to="/">
+      <NavLink to="/" className="navigation__logo-link">
         <h1 className="navigation__logo-text">NewsExplorer</h1>
       </NavLink>
       <nav className="navigation__button-container">
@@ -27,6 +28,15 @@ function Navigation({ handleOpenLoginModal }) {
           Sign In
         </button>
       </nav>
+      <MediaQuery maxWidth={360}>
+        <nav className="navigation__button-container-mobile">
+          <button
+            className="navigation__button_menu"
+            onClick={handleOpenMobileMenuModal}
+            type="button"
+          ></button>
+        </nav>
+      </MediaQuery>
     </div>
   );
 }

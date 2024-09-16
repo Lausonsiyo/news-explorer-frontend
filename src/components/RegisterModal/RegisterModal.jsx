@@ -2,17 +2,17 @@
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
 /* STYLE SHEET */
-import "./LoginModal.css";
+import "./RegisterModal.css";
 
-function LoginModal({ handleCloseClick, isOpen, handleAltClick }) {
+function RegisterModal({ handleCloseClick, isOpen, handleAltClick }) {
   return (
     <ModalWithForm
-      buttonText="Sing in"
-      title="Sing in"
-      formName="loginModal"
+      buttonText="Sing Up"
+      title="Sing Up"
+      formName="registerModal"
       onClose={handleCloseClick}
       isOpen={isOpen}
-      altButtonText={"Sing up"}
+      altButtonText={"Sing in"}
       handleAltClick={handleAltClick}
     >
       <form action="" className="modal__form">
@@ -23,7 +23,7 @@ function LoginModal({ handleCloseClick, isOpen, handleAltClick }) {
           type="text"
           id="email"
           className="modal__input"
-          placeholder="Email"
+          placeholder="Enter your email"
           required
           name="email"
         />
@@ -33,7 +33,18 @@ function LoginModal({ handleCloseClick, isOpen, handleAltClick }) {
         <input
           type="password"
           className="modal__input"
-          placeholder="Password"
+          placeholder="Enter your password"
+          id="password"
+          required
+          name="password"
+        />
+        <label htmlFor="username" className="modal__label">
+          Username
+        </label>
+        <input
+          type="text"
+          className="modal__input"
+          placeholder="Enter your username"
           id="password"
           required
           name="password"
@@ -43,4 +54,4 @@ function LoginModal({ handleCloseClick, isOpen, handleAltClick }) {
   );
 }
 
-export default LoginModal;
+export default RegisterModal;
