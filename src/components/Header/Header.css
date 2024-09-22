@@ -11,6 +11,7 @@
   .header {
     max-width: 768px;
     height: 400px;
+    background-size: cover;
   }
 }
 

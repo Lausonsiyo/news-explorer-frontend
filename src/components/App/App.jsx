@@ -116,7 +116,9 @@ function App() {
               <Routes>
                 <Route
                   path="/"
-                  element={<Main searchResults={searchResults} />}
+                  element={
+                    <Main searchError={searchError} isLoading={isSearching} />
+                  }
                 />
               </Routes>
               <Footer />

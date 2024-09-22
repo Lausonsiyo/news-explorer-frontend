@@ -1,6 +1,5 @@
 .about {
   min-height: 624px;
-  padding: 0 104px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -38,6 +37,33 @@
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
+}
+
+@media screen and (min-device-width: 360px) and (max-device-width: 768px) {
+  .about {
+    padding: 0 40px;
+    display: block;
+  }
+
+  .about__avatar-image {
+    width: 272px;
+    height: 272px;
+  }
+
+  .about__text {
+    margin-left: 32px;
+  }
+
+  .about__text-author {
+    margin: 40px 0 16px 0;
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .about__text-bio {
+    margin: 0;
+    font-size: 17px;
+  }
 }
 
 @media screen and (max-device-width: 360px) {

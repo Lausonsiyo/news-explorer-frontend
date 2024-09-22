@@ -87,6 +87,29 @@
   cursor: pointer;
 }
 @media screen and (min-device-width: 360px) and (max-device-width: 768px) {
+  .navigation {
+    height: 66px;
+  }
+
+  .navigation__logo-text {
+    padding: 22px 0 0 40px;
+  }
+
+  .navigation__button-home {
+    height: 66px;
+  }
+
+  .navigation__button-signin {
+    width: 152px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .navigation__button-container {
+    font-size: 16px;
+    padding-right: 40px;
+    gap: 16px;
+  }
 }
 
 @media screen and (max-device-width: 360px) {

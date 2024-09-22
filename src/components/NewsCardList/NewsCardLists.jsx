@@ -30,7 +30,7 @@ function NewsCardLists({}) {
               return (
                 <NewsCard
                   newsData={result}
-                  //   key={result.url}
+                  key={result.url}
                   //   handleSaveArticle={handleSaveArticle}
                   //   handleRemoveArticle={handleRemoveArticle}
                   //   onSignUp={onSignUp}
