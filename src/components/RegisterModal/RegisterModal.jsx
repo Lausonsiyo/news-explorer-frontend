@@ -27,16 +27,16 @@ function RegisterModal({ handleCloseClick, isOpen, handleAltClick }) {
           required
           name="email"
         />
-        <label htmlFor="password" className="modal__label">
+        <label htmlFor="register-password" className="modal__label">
           Password
         </label>
         <input
           type="password"
           className="modal__input"
           placeholder="Enter your password"
-          id="password"
+          id="register-password"
           required
-          name="password"
+          name="register-password"
         />
         <label htmlFor="username" className="modal__label">
           Username
@@ -45,9 +45,9 @@ function RegisterModal({ handleCloseClick, isOpen, handleAltClick }) {
           type="text"
           className="modal__input"
           placeholder="Enter your username"
-          id="password"
+          id="username"
           required
-          name="password"
+          name="username"
         />
       </form>
     </ModalWithForm>

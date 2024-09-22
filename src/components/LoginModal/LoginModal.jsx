@@ -16,27 +16,27 @@ function LoginModal({ handleCloseClick, isOpen, handleAltClick }) {
       handleAltClick={handleAltClick}
     >
       <form action="" className="modal__form">
-        <label htmlFor="email" className="modal__label">
+        <label htmlFor="login-email" className="modal__label">
           Email
         </label>
         <input
           type="text"
-          id="email"
+          id="login-email"
           className="modal__input"
           placeholder="Email"
           required
-          name="email"
+          name="login-email"
         />
-        <label htmlFor="password" className="modal__label">
+        <label htmlFor="login-password" className="modal__label">
           Password
         </label>
         <input
           type="password"
           className="modal__input"
           placeholder="Password"
-          id="password"
+          id="login-password"
           required
-          name="password"
+          name="login-password"
         />
       </form>
     </ModalWithForm>

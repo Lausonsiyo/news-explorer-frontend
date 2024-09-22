@@ -1,19 +1,34 @@
-// import { useEffect, useState } from "react";
-// import axios from "axios";
+/* STYLE SHEET IMPORTS */
+import "./NewsCard.css";
 
-// import React from "react";
+/* REACT DEPENDENCIES */
 
-// const NewsCard = () => {
-//   const API_KEY = "5d667f8e8d8c4b9c976ca8fa200e4498";
+function NewsCard({ newsData }) {
+  const formattedDate = new Date(newsData.publishedAt).toLocaleString(
+    "default",
+    {
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+    }
+  );
 
-//   const [infoPok, setInfoPok] = useState();
+  return (
+    <div className="card__container">
+      <img
+        src={newsData.urlToImage}
+        alt={`newsData.title-${"image"}`}
+        className="card__image"
+      />
+      <div className="card__text">
+        <p className="card__date-published">{formattedDate} </p>
+        <h3 className="card__title">{newsData.title} </h3>
+        <p className="card__content">{newsData.description}</p>
 
-//   useEffect(() => {
-//     const URL_INFO = `"https://newsapi.org/v2/everything?" +
-//       "apiKey=${API_KEY}"`;
-//     axios.get(URL_INFO).then((res) => setInfoPok(res.data));
-//     console.log(infoPok).catch((err) => console.log(err));
-//   }, []);
-// };
+        <p className="card__source">{newsData.source.name}</p>
+      </div>
+    </div>
+  );
+}
 
-// export default NewsCard;
+export default NewsCard;

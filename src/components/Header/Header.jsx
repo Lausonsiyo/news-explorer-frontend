@@ -8,7 +8,7 @@ import SearchForm from "../SearchForm/SearchForm";
 function Header({
   handleOpenLoginModal,
   handleOpenMobileMenuModal,
-  handleOpenRegisterModal,
+  handleSearch,
 }) {
   return (
     <div className="header">
@@ -16,7 +16,7 @@ function Header({
         handleOpenLoginModal={handleOpenLoginModal}
         handleOpenMobileMenuModal={handleOpenMobileMenuModal}
       />
-      <SearchForm />
+      <SearchForm handleSearch={handleSearch} />
     </div>
   );
 }
