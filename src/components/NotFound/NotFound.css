@@ -30,7 +30,7 @@
   margin: 0px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-device-width: 768px) {
   .not-found {
     padding: 48px 0;
   }
@@ -47,7 +47,7 @@
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 425px) {
+@media screen and (min-device-width: 362px) and (max-device-width: 768px) {
   .not-found {
     padding: 48px 16px;
   }

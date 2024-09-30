@@ -1,3 +1,3 @@
-import { createContext } from "react";
+import React from "react";
 
-export const HasSearchedContext = createContext();
+export const HasSearchedContext = React.createContext({ hasSearched: {} });

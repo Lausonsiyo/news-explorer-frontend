@@ -59,22 +59,52 @@
   } */
 
 /* .card__button-bookmark {
-    background: transparent url(../../images/bookmark-normal.svg);
-    width: 40px;
-    height: 40px;
-    border: none;
-    border-radius: 8px;
-    padding: 8px;
-    cursor: pointer;
-    position: absolute;
-    top: 24px;
-    right: 24px;
-  } */
-/*   
-  .card__button-bookmark:hover {
-    background: transparent url(../../images/bookmark-hover.svg);
-  }
-  
+  background: white url(../../assets//images/bookmark.svg) no-repeat;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+} */
+
+.card__button-bookmark {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  background: white;
+}
+
+.card__button-bookmark::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../../assets/images/bookmark.svg) no-repeat center;
+  background-size: 80%;
+  opacity: 0.5;
+  z-index: 1;
+  border-radius: 8px;
+  transition: ease-in-out 0.2s;
+}
+
+.card__button-bookmark:hover::before {
+  opacity: 1;
+}
+
+/*
   .card__button-bookmark_marked {
     background: transparent url(../../images/bookmark-clicked.svg);
   } */
@@ -177,5 +207,55 @@
 
   .card__title {
     height: min-content;
+  }
+}
+
+@media screen and (min-device-width: 362px) and (max-device-width: 768px) {
+  .card__container {
+    border-radius: 14px;
+    width: 215px;
+    min-height: 420px;
+  }
+
+  .card__button-bookmark {
+    top: 8px;
+    right: 8px;
+  }
+
+  .card__image {
+    width: 224px;
+    height: 150px;
+  }
+
+  .card__text {
+    text-align: left;
+    margin: 16px;
+  }
+
+  .card__date-published {
+    margin: 0 0 10px;
+  }
+
+  .card__title {
+    font-size: 22px;
+    line-height: 24px;
+    margin: 0;
+    height: 72px;
+    -webkit-line-clamp: 3;
+  }
+
+  .card__content {
+    margin: 10px 0 12px;
+    height: 5.5em;
+    overflow: hidden;
+    -webkit-line-clamp: 4;
+  }
+
+  .card__source {
+    bottom: -4px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
   }
 }

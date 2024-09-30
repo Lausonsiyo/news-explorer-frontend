@@ -11,11 +11,9 @@ import { SearchResultContext } from "../../context/SearchResultsContext";
 /* REACT DEPENDENCIES */
 import { useContext } from "react";
 
-function Main({ isLoading, searchError }) {
+function Main({ isLoading, searchError, isLoggedIn, handleOpenLoginModal }) {
   const { hasSearched } = useContext(HasSearchedContext);
-  const { searchResult } = useContext(SearchResultContext);
-
-  console.log("Search Result:", searchResult);
+  const { searchResults } = useContext(SearchResultContext);
 
   return (
     <div className="main">
@@ -23,18 +21,21 @@ function Main({ isLoading, searchError }) {
         {isLoading && <Preloader />}
         {!isLoading &&
         hasSearched &&
-        Array.isArray(searchResult) &&
-        searchResult.length > 0 ? (
-          <NewsCardLists />
+        Array.isArray(searchResults) &&
+        searchResults.length > 0 ? (
+          <NewsCardLists
+            handleOpenLoginModal={handleOpenLoginModal}
+            isLoggedIn={isLoggedIn}
+          />
         ) : !isLoading &&
           hasSearched &&
-          Array.isArray(searchResult) &&
-          searchResult.length === 0 ? (
+          Array.isArray(searchResults) &&
+          searchResults.length === 0 ? (
           <NotFound />
         ) : searchError === true ? (
           <p>
-            Sorry, something went wrong during the request. Please try again
-            later.
+            Sorry, something went wrong during the request. There may be a
+            connection issue or the server may be down. Please try again later.
           </p>
         ) : (
           ""

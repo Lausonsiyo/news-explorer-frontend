@@ -11,7 +11,7 @@ import { useContext, useState } from "react";
 import { HasSearchedContext } from "../../context/HasSearchedContext";
 import { SearchResultContext } from "../../context/SearchResultsContext";
 
-function NewsCardLists({}) {
+function NewsCardLists(isLoggedIn, handleOpenLoginModal) {
   const [cardsDisplayed, setCardsDisplayed] = useState(3);
   const { searchResults } = useContext(SearchResultContext);
   const { hasSearched } = useContext(HasSearchedContext);
@@ -29,11 +29,12 @@ function NewsCardLists({}) {
             {searchResults.slice(0, cardsDisplayed).map((result) => {
               return (
                 <NewsCard
+                  isLoggedIn={isLoggedIn}
                   newsData={result}
                   key={result.url}
                   //   handleSaveArticle={handleSaveArticle}
                   //   handleRemoveArticle={handleRemoveArticle}
-                  //   onSignUp={onSignUp}
+                  handleOpenLoginModal={handleOpenLoginModal}
                 />
               );
             })}

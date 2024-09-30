@@ -2,6 +2,7 @@
   width: 1440px;
   height: 282px;
   align-content: center;
+  justify-content: center;
 }
 
 .circle-preloader {
@@ -32,5 +33,19 @@
 @keyframes spin {
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-device-width: 360px) {
+  .preloader {
+    height: 282px;
+    width: 360px;
+  }
+}
+
+@media screen and (min-device-width: 362px) and (max-device-width: 768px) {
+  .preloader {
+    max-width: 768px;
+    height: 282px;
   }
 }

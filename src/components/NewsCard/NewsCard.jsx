@@ -2,8 +2,11 @@
 import "./NewsCard.css";
 
 /* REACT DEPENDENCIES */
+import { useState } from "react";
 
-function NewsCard({ newsData }) {
+function NewsCard({ newsData, isLoggedIn, handleOpenLoginModal }) {
+  const [isHovered, setIsHovered] = useState(false);
+
   const formattedDate = new Date(newsData.publishedAt).toLocaleString(
     "default",
     {
@@ -13,8 +16,48 @@ function NewsCard({ newsData }) {
     }
   );
 
+  const handleBookmarkClick = () => {
+    console.log("bookmark clicked");
+
+    // TO DO: Implement bookmark logic
+    // const token = localStorage.getItem("jwt");
+    // handleSaveArticle({ newsData, keyword, token });
+  };
+
   return (
     <div className="card__container">
+      {isLoggedIn ? (
+        <button
+          className={`card__button-bookmark 
+              ? "card__button-bookmark_marked"
+              : ""
+          }`}
+          onClick={handleBookmarkClick}
+        />
+      ) : (
+        ""
+      )}
+      {!isLoggedIn && (
+        <>
+          <div
+            className={`card__popup-text ${
+              isHovered ? "" : "card__popup-text_hidden"
+            }`}
+          >
+            Sign in to save articles
+          </div>
+          <button
+            className="card__button-bookmark"
+            onClick={handleOpenLoginModal}
+            onMouseEnter={() => {
+              setIsHovered(true);
+            }}
+            onMouseLeave={() => {
+              setIsHovered(false);
+            }}
+          />
+        </>
+      )}
       <img
         src={newsData.urlToImage}
         alt={`newsData.title-${"image"}`}

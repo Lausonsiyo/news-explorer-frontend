@@ -16,7 +16,7 @@ function Navigation({ handleOpenLoginModal, handleOpenMobileMenuModal }) {
           to="/"
           className="navigation__button-home"
           type="text"
-          activeClassName="navigation__button-active"
+          activeclassname="navigation__button-active"
         >
           Home
         </NavLink>

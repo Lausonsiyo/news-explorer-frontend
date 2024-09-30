@@ -86,7 +86,7 @@
   border: none;
   cursor: pointer;
 }
-@media screen and (min-device-width: 360px) and (max-device-width: 768px) {
+@media screen and (min-device-width: 362px) and (max-device-width: 768px) {
   .navigation {
     height: 66px;
   }

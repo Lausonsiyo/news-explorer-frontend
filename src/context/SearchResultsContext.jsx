@@ -1,3 +1,3 @@
-import { createContext } from "react";
+import React from "react";
 
-export const SearchResultContext = createContext();
+export const SearchResultContext = React.createContext({ searchResults: {} });

@@ -41,6 +41,17 @@
   display: none;
 }
 
+@media screen and (min-device-width: 362px) and (max-device-width: 768px) {
+  .newscards__section {
+    padding: 32px 16px 24px;
+  }
+
+  .newscards__container {
+    gap: 8px;
+    margin: 32px 0;
+  }
+}
+
 @media screen and (max-device-width: 360px) {
   .newscards__section {
     display: flex;

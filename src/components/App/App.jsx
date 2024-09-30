@@ -9,6 +9,7 @@ import "./App.css";
 import { handleSearchResponse } from "../../utils/newsApi";
 
 /* CONTEXT PROVIDERS IMPORTS */
+import { CurrentUserContext } from "../../context/CurrentUserContext";
 import { HasSearchedContext } from "../../context/HasSearchedContext";
 import { SearchResultContext } from "../../context/SearchResultsContext";
 
@@ -22,14 +23,19 @@ import RegisterModal from "../RegisterModal/RegisterModal";
 import NewsCard from "../NewsCard/NewsCard";
 import SuccessModal from "../SuccessModal/SuccessModal";
 
+/* PROTECTED ROUTE */
+import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
+
 function App() {
   /* INITIAL CONTEXTS-/-USESTATE HOOKS  */
+  const [currentUser, setCurrentUser] = useState({});
   const [activeModal, setActiveModal] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [serverError, setServerError] = useState(null);
   const [isSearching, setIsSearching] = useState(false);
   const [hasSearched, setHasSearched] = useState(false);
   const [searchError, setSearchError] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [searchResults, setSearchResults] = useState([]);
   const [keyword, setKeyword] = useState("");
 
@@ -105,55 +111,62 @@ function App() {
   return (
     <>
       <div className="App">
-        <HasSearchedContext.Provider value={{ hasSearched }}>
-          <SearchResultContext.Provider value={{ searchResults }}>
-            <div className="App__content">
-              <Header
+        <CurrentUserContext.Provider value={currentUser}>
+          <HasSearchedContext.Provider value={{ hasSearched }}>
+            <SearchResultContext.Provider value={{ searchResults }}>
+              <div className="App__content">
+                <Header
+                  handleOpenLoginModal={handleOpenLoginModal}
+                  handleOpenMobileMenuModal={handleOpenMobileMenuModal}
+                  handleSearch={handleSearch}
+                />
+                <Routes>
+                  <Route
+                    path="/"
+                    element={
+                      <Main
+                        handleOpenLoginModal={handleOpenLoginModal}
+                        isLoggedIn={isLoggedIn}
+                        searchError={searchError}
+                        isLoading={isSearching}
+                      />
+                    }
+                  />
+                </Routes>
+                <Footer />
+              </div>
+              <LoginModal
+                handleOpenLoginModal={handleOpenLoginModal}
+                isOpen={activeModal === "login"}
+                handleCloseClick={handleCloseClick}
+                isLoading={isLoading}
+                handleAltClick={handleAltClick}
+                serverError={serverError}
+              />
+              <RegisterModal
+                handleAltClick={handleAltClick}
+                handleOpenRegisterModal={handleOpenRegisterModal}
+                isOpen={activeModal === "register"}
+                handleCloseClick={handleCloseClick}
+                isLoading={isLoading}
+                serverError={serverError}
+              />
+              <MobileMenu
+                handleOpenRegisterModal={handleOpenRegisterModal}
                 handleOpenLoginModal={handleOpenLoginModal}
                 handleOpenMobileMenuModal={handleOpenMobileMenuModal}
-                handleSearch={handleSearch}
+                isOpen={activeModal === "mobileMenu"}
+                handleCloseClick={handleCloseClick}
+                isLoading={isLoading}
               />
-              <Routes>
-                <Route
-                  path="/"
-                  element={
-                    <Main searchError={searchError} isLoading={isSearching} />
-                  }
-                />
-              </Routes>
-              <Footer />
-            </div>
-            <LoginModal
-              handleOpenLoginModal={handleOpenLoginModal}
-              isOpen={activeModal === "login"}
-              handleCloseClick={handleCloseClick}
-              isLoading={isLoading}
-              handleAltClick={handleAltClick}
-              serverError={serverError}
-            />
-            <RegisterModal
-              handleAltClick={handleAltClick}
-              handleOpenRegisterModal={handleOpenRegisterModal}
-              isOpen={activeModal === "register"}
-              handleCloseClick={handleCloseClick}
-              isLoading={isLoading}
-              serverError={serverError}
-            />
-            <MobileMenu
-              handleOpenRegisterModal={handleOpenRegisterModal}
-              handleOpenLoginModal={handleOpenLoginModal}
-              handleOpenMobileMenuModal={handleOpenMobileMenuModal}
-              isOpen={activeModal === "mobileMenu"}
-              handleCloseClick={handleCloseClick}
-              isLoading={isLoading}
-            />
-            <SuccessModal
-              isOpen={activeModal === "successModal"}
-              handleCloseClick={handleCloseClick}
-              handleOpenLoginModal={handleOpenLoginModal}
-            />
-          </SearchResultContext.Provider>
-        </HasSearchedContext.Provider>
+              <SuccessModal
+                isOpen={activeModal === "successModal"}
+                handleCloseClick={handleCloseClick}
+                handleOpenLoginModal={handleOpenLoginModal}
+              />
+            </SearchResultContext.Provider>
+          </HasSearchedContext.Provider>
+        </CurrentUserContext.Provider>
       </div>
     </>
   );
