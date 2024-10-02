@@ -124,12 +124,15 @@ function App() {
                   <Route
                     path="/"
                     element={
+                      // <ProtectedRoute isLoggedIn={isLoggedIn}>
                       <Main
                         handleOpenLoginModal={handleOpenLoginModal}
                         isLoggedIn={isLoggedIn}
+                        setIsLoggedIn={setIsLoggedIn}
                         searchError={searchError}
                         isLoading={isSearching}
                       />
+                      // </ProtectedRoute>
                     }
                   />
                 </Routes>

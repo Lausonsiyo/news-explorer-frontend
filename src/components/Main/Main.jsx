@@ -16,8 +16,8 @@ function Main({ isLoading, searchError, isLoggedIn, handleOpenLoginModal }) {
   const { searchResults } = useContext(SearchResultContext);
 
   return (
-    <div className="main">
-      <div>
+    <main>
+      <section className="card__section">
         {isLoading && <Preloader />}
         {!isLoading &&
         hasSearched &&
@@ -40,9 +40,11 @@ function Main({ isLoading, searchError, isLoggedIn, handleOpenLoginModal }) {
         ) : (
           ""
         )}
-      </div>
-      <About />
-    </div>
+      </section>
+      <section className="about__section">
+        <About />
+      </section>
+    </main>
   );
 }
 export default Main;

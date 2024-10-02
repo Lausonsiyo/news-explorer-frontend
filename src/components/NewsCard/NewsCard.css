@@ -22,7 +22,8 @@
   left: 24px;
 } */
 
-/* .card__popup-text {
+.card__popup-text {
+  position: absolute;
   background-color: white;
   padding: 8px 22px;
   border-radius: 8px;
@@ -35,11 +36,12 @@
   font-weight: 500;
   line-height: 1.7;
   text-align: center;
-} */
+  z-index: 10;
+}
 
-/* .card__popup-text_hidden {
+.card__popup-text_hidden {
   display: none;
-} */
+}
 /*   
   .card__button-delete {
     background: url(../../images/card-delete.svg);
@@ -57,20 +59,6 @@
     background: url(../../images/card-delete-hover.svg);
     cursor: pointer;
   } */
-
-/* .card__button-bookmark {
-  background: white url(../../assets//images/bookmark.svg) no-repeat;
-  background-position: center;
-  width: 40px;
-  height: 40px;
-  border: none;
-  border-radius: 8px;
-  padding: 8px;
-  cursor: pointer;
-  position: absolute;
-  top: 24px;
-  right: 24px;
-} */
 
 .card__button-bookmark {
   position: absolute;
@@ -104,10 +92,15 @@
   opacity: 1;
 }
 
-/*
-  .card__button-bookmark_marked {
-    background: transparent url(../../images/bookmark-clicked.svg);
-  } */
+.card__button-bookmark_marked {
+  background: white url(../../assets/images/bookmarkclicked.svg) no-repeat
+    center;
+  background-size: 80%;
+}
+
+.card__button-bookmark_marked::before {
+  content: none;
+}
 
 .card__image {
   width: -webkit-fill-available;

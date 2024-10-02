@@ -12,8 +12,6 @@ const SearchForm = ({ handleSearch }) => {
   } = useForm();
 
   const handleSearchSubmit = ({ keyword }) => {
-    console.log({ keyword });
-
     handleSearch({ keyword });
   };
 
