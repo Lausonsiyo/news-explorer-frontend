@@ -3,10 +3,24 @@ import "./NewsCard.css";
 
 /* REACT DEPENDENCIES */
 import { useState } from "react";
+import { useContext } from "react";
 
-function NewsCard({ newsData, isLoggedIn, handleOpenLoginModal }) {
+/* CONTEXT IMPORTS */
+import { CurrentPageContext } from "../../context/CurrentPageContext";
+import { KeywordContext } from "../../context/KeywordContext";
+
+function NewsCard({
+  newsData,
+  isLoggedIn,
+  handleOpenLoginModal,
+  handleRemoveArticle,
+  handleSaveArticle,
+}) {
   const [isHovered, setIsHovered] = useState(false);
   const [isBookmarked, setIsBookmarked] = useState(false);
+  const { currentPage, setCurrentPage } = useContext(CurrentPageContext);
+  const { keyword } = useContext(KeywordContext);
+
   const formattedDate = new Date(newsData.publishedAt).toLocaleString(
     "default",
     {
@@ -20,13 +34,43 @@ function NewsCard({ newsData, isLoggedIn, handleOpenLoginModal }) {
   const handleBookmarkClick = () => {
     console.log("bookmark clicked");
     setIsBookmarked(!isBookmarked);
-    // TO DO: Implement bookmark logic
-    // const token = localStorage.getItem("jwt");
-    // handleSaveArticle({ newsData, keyword, token });
+    const token = localStorage.getItem("jwt");
+    handleSaveArticle({ newsData, keyword, token });
+  };
+
+  const handleRemoveClick = () => {
+    console.log("Remove card clicked");
+
+    const token = localStorage.getItem("jwt");
+    handleRemoveArticle({ newsData, token });
   };
 
   return (
     <div className="card__container">
+      {currentPage === "/saved-news" && (
+        <>
+          <div className="card__keyword">{/* {newsData.keyword} */}</div>
+
+          <div
+            className={`card__popup-text ${
+              isHovered ? "" : "card__popup-text_hidden"
+            }`}
+          >
+            Remove from saved
+          </div>
+          <button
+            className="card__button-delete"
+            onClick={handleRemoveClick}
+            onMouseEnter={() => {
+              setIsHovered(true);
+            }}
+            onMouseLeave={() => {
+              setIsHovered(false);
+            }}
+          />
+        </>
+      )}
+
       {isLoggedIn ? (
         <button
           className={`card__button-bookmark ${
@@ -48,11 +92,9 @@ function NewsCard({ newsData, isLoggedIn, handleOpenLoginModal }) {
             onClick={handleOpenLoginModal}
             onMouseEnter={() => {
               setIsHovered(true);
-              console.log("Hovering:", isHovered);
             }}
             onMouseLeave={() => {
               setIsHovered(false);
-              console.log("Not hovering:", isHovered);
             }}
           />
         </>
@@ -75,53 +117,3 @@ function NewsCard({ newsData, isLoggedIn, handleOpenLoginModal }) {
 }
 
 export default NewsCard;
-
-/*(
-    <div className="card__container">
-      {!isLoggedIn ? (
-        <button
-          className={`card__button-bookmark ${
-            isBookmarked ? "card__button-bookmark_marked" : ""
-          }`}
-          onClick={handleBookmarkClick}
-        />
-      ) : (
-        ""
-      )}
-      {isLoggedIn && (
-        <>
-          <div
-            className={`card__popup-text ${
-              isHovered ? "" : "card__popup-text_hidden"
-            }`}
-          >
-            Sign in to save articles
-          </div>
-          <button
-            className="card__button-bookmark"
-            onClick={handleOpenLoginModal}
-            onMouseEnter={() => {
-              setIsHovered(true);
-              console.log("Hovering:", isHovered);
-            }}
-            onMouseLeave={() => {
-              setIsHovered(false);
-              console.log("Not hovering:", isHovered);
-            }}
-          />
-        </>
-      )}
-      <img
-        src={newsData.urlToImage}
-        alt={`newsData.title-${"image"}`}
-        className="card__image"
-      />
-      <div className="card__text">
-        <p className="card__date-published">{formattedDate} </p>
-        <h3 className="card__title">{newsData.title} </h3>
-        <p className="card__content">{newsData.description}</p>
-
-        <p className="card__source">{newsData.source.name}</p>
-      </div>
-    </div>
-  );*/

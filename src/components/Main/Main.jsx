@@ -3,6 +3,7 @@ import About from "../About/About";
 import NewsCardLists from "../NewsCardList/NewsCardLists";
 import Preloader from "../Preloader/Preloader";
 import NotFound from "../NotFound/NotFound";
+import Header from "../Header/Header";
 
 /* CONTEXT PROVIDER IMPORTS */
 import { HasSearchedContext } from "../../context/HasSearchedContext";
@@ -11,12 +12,29 @@ import { SearchResultContext } from "../../context/SearchResultsContext";
 /* REACT DEPENDENCIES */
 import { useContext } from "react";
 
-function Main({ isLoading, searchError, isLoggedIn, handleOpenLoginModal }) {
+function Main({
+  isLoading,
+  searchError,
+  isLoggedIn,
+  handleOpenLoginModal,
+  handleOpenMobileMenuModal,
+  handleSearch,
+  handleRemoveArticle,
+  handleSaveArticle,
+}) {
   const { hasSearched } = useContext(HasSearchedContext);
   const { searchResults } = useContext(SearchResultContext);
 
   return (
     <main>
+      <section className="header__section">
+        <Header
+          handleOpenLoginModal={handleOpenLoginModal}
+          handleOpenMobileMenuModal={handleOpenMobileMenuModal}
+          handleSearch={handleSearch}
+          isLoggedIn={isLoggedIn}
+        />
+      </section>
       <section className="card__section">
         {isLoading && <Preloader />}
         {!isLoading &&
@@ -26,6 +44,8 @@ function Main({ isLoading, searchError, isLoggedIn, handleOpenLoginModal }) {
           <NewsCardLists
             handleOpenLoginModal={handleOpenLoginModal}
             isLoggedIn={isLoggedIn}
+            handleRemoveArticle={handleRemoveArticle}
+            handleSaveArticle={handleSaveArticle}
           />
         ) : !isLoading &&
           hasSearched &&

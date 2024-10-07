@@ -42,23 +42,24 @@
 .card__popup-text_hidden {
   display: none;
 }
-/*   
-  .card__button-delete {
-    background: url(../../images/card-delete.svg);
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    top: 24px;
-    right: 24px;
-  } */
 
-/* .card__button-delete:hover {
-    background: url(../../images/card-delete-hover.svg);
-    cursor: pointer;
-  } */
+.card__button-delete {
+  background: url(../../assets/images/trashcan_icon.svg);
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  opacity: 0.5;
+}
+
+.card__button-delete:hover {
+  cursor: pointer;
+  opacity: 1;
+}
 
 .card__button-bookmark {
   position: absolute;
@@ -206,7 +207,7 @@
 @media screen and (min-device-width: 362px) and (max-device-width: 768px) {
   .card__container {
     border-radius: 14px;
-    width: 215px;
+    width: 190px;
     min-height: 420px;
   }
 

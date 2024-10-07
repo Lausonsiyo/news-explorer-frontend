@@ -11,7 +11,12 @@ import { useContext, useState } from "react";
 import { HasSearchedContext } from "../../context/HasSearchedContext";
 import { SearchResultContext } from "../../context/SearchResultsContext";
 
-function NewsCardLists(isLoggedIn, handleOpenLoginModal) {
+function NewsCardLists({
+  isLoggedIn,
+  handleOpenLoginModal,
+  handleRemoveArticle,
+  handleSaveArticle,
+}) {
   const [cardsDisplayed, setCardsDisplayed] = useState(3);
   const { searchResults } = useContext(SearchResultContext);
   const { hasSearched } = useContext(HasSearchedContext);
@@ -32,9 +37,9 @@ function NewsCardLists(isLoggedIn, handleOpenLoginModal) {
                   isLoggedIn={isLoggedIn}
                   newsData={result}
                   key={result.url}
-                  //   handleSaveArticle={handleSaveArticle}
-                  //   handleRemoveArticle={handleRemoveArticle}
+                  handleRemoveArticle={handleRemoveArticle}
                   handleOpenLoginModal={handleOpenLoginModal}
+                  handleSaveArticle={handleSaveArticle}
                 />
               );
             })}

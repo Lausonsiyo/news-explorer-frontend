@@ -60,6 +60,39 @@
   border-bottom: 3px solid;
 }
 
+.navigation__button-logout {
+  border: 1px solid white;
+  background-color: transparent;
+  width: 176px;
+  height: 48px;
+  border-radius: 48px;
+  cursor: pointer;
+  color: white;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.navigation__button-logout-userName {
+  display: inline-flex;
+  margin: auto 10px;
+}
+
+.navigation__button-saved-news {
+  width: 120px;
+  height: 76px;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  opacity: 0.5;
+}
+
 .navigation__button-signin {
   border: 1px solid white;
   background-color: transparent;
@@ -86,13 +119,47 @@
   border: none;
   cursor: pointer;
 }
+
+.navigation__button_menu_black {
+  background: transparent url(../../assets/images/mobile_menu_iconBlack.svg);
+}
+
+.navigation__logo-text_black {
+  color: black;
+  padding: 30px 0 0 0;
+}
+
+.navigation__button-home_black {
+  color: black;
+  border-bottom: none;
+  opacity: 0.5;
+}
+
+.navigation__button-saved-news_black {
+  color: black;
+  border-bottom: 3px solid;
+  opacity: 1;
+}
+
+.navigation__button-logout_black {
+  color: black;
+  border: 1px rgba(0, 0, 0, 0.2) solid;
+}
+
+.navigation_black {
+  height: 80px;
+  border-bottom: rgba(0, 0, 0, 0.2) solid;
+  display: flex;
+  justify-content: space-between;
+}
+
 @media screen and (min-device-width: 362px) and (max-device-width: 768px) {
   .navigation {
     height: 66px;
   }
 
   .navigation__logo-text {
-    padding: 22px 0 0 40px;
+    padding: 22px 0 0 0;
   }
 
   .navigation__button-home {
@@ -107,8 +174,12 @@
 
   .navigation__button-container {
     font-size: 16px;
-    padding-right: 40px;
-    gap: 16px;
+    padding-right: 10px;
+    gap: 0px;
+  }
+
+  .navigation__button-saved-news {
+    height: 68px;
   }
 }
 
@@ -130,5 +201,10 @@
     line-height: 24px;
     padding: 0 0 0 16px;
     margin: 0;
+  }
+
+  .navigation__logo-text_black {
+    color: black;
+    padding: 0;
   }
 }
