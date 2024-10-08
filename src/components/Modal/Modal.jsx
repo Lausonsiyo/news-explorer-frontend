@@ -24,11 +24,15 @@ function Modal({ isOpen, onClose, children, name }) {
 
   return (
     <div
-      className={`modal modal_type_${name} ${isOpen && "modal_opened"}`}
+      className={`modal modal__type_${name} ${isOpen && "modal_opened"}`}
       onClick={handleOverlay}
     >
       <div className={`modal__content modal__content_type_${name}`}>
-        <button onClick={onClose} className="modal__close" type="button" />
+        <button
+          onClick={onClose}
+          className={`modal__close modal__close_type_${name}`}
+          type="button"
+        />
         {children}
       </div>
     </div>

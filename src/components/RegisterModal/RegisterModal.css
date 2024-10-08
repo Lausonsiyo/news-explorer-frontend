@@ -1,0 +1,9 @@
+@media screen and (max-device-width: 360px) {
+  .modal__type_registerModal {
+    align-items: flex-end;
+  }
+
+  .modal__content_type_registerModal {
+    border-radius: 20px 20px 0 0;
+  }
+}
