@@ -30,20 +30,21 @@ function NewsCardLists({
       {hasSearched ? (
         <>
           <h2 className="newscards__title">Search results</h2>
-          <div className="newscards__container">
+          <ul className="newscards__container">
             {searchResults.slice(0, cardsDisplayed).map((result) => {
               return (
-                <NewsCard
-                  isLoggedIn={isLoggedIn}
-                  newsData={result}
-                  key={result.url}
-                  handleRemoveArticle={handleRemoveArticle}
-                  handleOpenLoginModal={handleOpenLoginModal}
-                  handleSaveArticle={handleSaveArticle}
-                />
+                <li className="newscards__item" key={result.url}>
+                  <NewsCard
+                    isLoggedIn={isLoggedIn}
+                    newsData={result}
+                    handleRemoveArticle={handleRemoveArticle}
+                    handleOpenLoginModal={handleOpenLoginModal}
+                    handleSaveArticle={handleSaveArticle}
+                  />
+                </li>
               );
             })}
-          </div>
+          </ul>
           <button
             className={`newscards__button ${
               cardsDisplayed >= searchResults.length

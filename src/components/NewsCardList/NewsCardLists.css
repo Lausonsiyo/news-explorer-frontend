@@ -18,9 +18,21 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 16px;
-  justify-content: center;
+  justify-content: space-around;
   margin: 64px 0;
+  list-style: none;
+  padding: 0;
+  margin: 64px 0;
+  row-gap: 16px;
+  column-gap: 16px;
+  width: fit-content;
+}
+
+.newscards__item {
+  display: flex;
+  flex-direction: column;
+  max-width: 335px;
+  list-style: none;
 }
 
 .newscards__button {
@@ -49,6 +61,10 @@
   .newscards__container {
     gap: 8px;
     margin: 32px 0;
+  }
+
+  .newscards__item {
+    width: fit-content;
   }
 }
 

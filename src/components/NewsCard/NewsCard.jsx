@@ -46,7 +46,7 @@ function NewsCard({
   };
 
   return (
-    <div className="card__container">
+    <article className="card__container">
       {currentPage === "/saved-news" && (
         <>
           <div className="card__keyword">{/* {newsData.keyword} */}</div>
@@ -112,7 +112,7 @@ function NewsCard({
 
         <p className="card__source">{newsData.source.name}</p>
       </div>
-    </div>
+    </article>
   );
 }
 

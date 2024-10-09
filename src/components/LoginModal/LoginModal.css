@@ -33,4 +33,12 @@
   .modal__content_type_loginModal {
     border-radius: 20px 20px 0 0;
   }
+
+  .modal__close_type_loginModal {
+    right: 0;
+    width: 24px;
+    height: 24px;
+    top: -25px;
+    opacity: 0.8;
+  }
 }

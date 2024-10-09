@@ -12,14 +12,14 @@ function Header({
   isLoggedIn,
 }) {
   return (
-    <div className="header">
+    <header className="header">
       <Navigation
         handleOpenLoginModal={handleOpenLoginModal}
         handleOpenMobileMenuModal={handleOpenMobileMenuModal}
         isLoggedIn={isLoggedIn}
       />
       <SearchForm handleSearch={handleSearch} />
-    </div>
+    </header>
   );
 }
 

@@ -15,8 +15,8 @@ const About = () => {
             Hello! I'm Andres Lauson, a software developer with expertise in a
             broad spectrum of technologies including JavaScript, AWS, SQL,
             React, Node.js, Express.js, HTML, CSS, MongoDB, and Google Cloud.
-            <br></br>
-            <br></br>
+          </p>
+          <p className="about__text-bio">
             My coding journey began at TripleTen Academy, where I honed my
             skills through rigorous training, preparing me to tackle complex
             development challenges head-on. Whether it's designing intuitive
