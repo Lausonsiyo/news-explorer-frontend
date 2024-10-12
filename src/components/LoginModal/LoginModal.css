@@ -25,7 +25,11 @@
   margin-bottom: 39px;
 }
 
-@media screen and (max-device-width: 360px) {
+.modal__content_type_loginModal {
+  max-height: fit-content;
+}
+
+@media screen and (max-width: 345px) {
   .modal__type_loginModal {
     align-items: flex-end;
   }

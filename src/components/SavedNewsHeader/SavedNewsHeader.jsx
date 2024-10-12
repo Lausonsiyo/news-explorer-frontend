@@ -15,7 +15,7 @@ const SavedNewsHeader = ({ handleOpenMobileMenuModal, isLoggedIn }) => {
 
   return (
     <div className="saved-news">
-      <section className="navigation__section">
+      <section>
         <Navigation
           isLoggedIn={isLoggedIn}
           handleOpenMobileMenuModal={handleOpenMobileMenuModal}

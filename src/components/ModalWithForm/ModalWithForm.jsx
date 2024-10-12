@@ -15,6 +15,7 @@ function ModalWithForm({
   isLoading,
   altButtonText,
   handleAltClick,
+  isDisabled,
 }) {
   return (
     <Modal isOpen={isOpen} onClose={onClose} name={formName}>
@@ -22,7 +23,13 @@ function ModalWithForm({
       <form className="modal__form" onSubmit={onSubmit}>
         {children}
         <div className="modal__submit-container">
-          <button className="modal__submit" type="submit">
+          <button
+            className={`modal__submit ${
+              isDisabled === true ? "modal__button-disabled" : ""
+            }`}
+            type="submit"
+            disabled={isDisabled}
+          >
             {isLoading ? "Saving..." : buttonText}
           </button>
         </div>

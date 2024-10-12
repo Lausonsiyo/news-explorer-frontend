@@ -18,15 +18,14 @@ const SavedNewsCardList = ({ handleRemoveArticle }) => {
   return (
     <section className="savednews-newscards">
       <div className="savednews-newscards__container">
-        {savedArticles
-          .filter((article) => article.owner === currentUser._id)
-          .map((article) => (
-            <NewsCard
-              newsData={article}
-              key={article.link}
-              handleRemoveArticle={handleRemoveArticle}
-            />
-          ))}
+        {savedArticles.filter((article) => (
+          /* article.owner === currentUser._id)
+          .map((article) => */ <NewsCard
+            newsData={article}
+            key={article.link}
+            handleRemoveArticle={handleRemoveArticle}
+          />
+        ))}
       </div>
     </section>
   );

@@ -207,7 +207,11 @@ function App() {
           <CurrentUserContext.Provider value={currentUser}>
             <HasSearchedContext.Provider value={{ hasSearched }}>
               <SearchResultContext.Provider value={{ searchResults }}>
-                <SavedArticlesContext.Provider value={{ savedArticles }}>
+                <SavedArticlesContext.Provider
+                  value={{
+                    savedArticles,
+                  }}
+                >
                   <KeywordContext.Provider value={{ keyword }}>
                     <div className="App__content">
                       <Routes>
@@ -268,6 +272,7 @@ function App() {
                       isOpen={activeModal === "mobileMenu"}
                       handleCloseClick={handleCloseClick}
                       isLoading={isLoading}
+                      isLoggedIn={isLoggedIn}
                     />
                     <SuccessModal
                       isOpen={activeModal === "successModal"}

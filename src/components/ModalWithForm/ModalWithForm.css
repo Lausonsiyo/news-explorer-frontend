@@ -31,3 +31,20 @@
   display: flex;
   justify-content: center;
 }
+
+.modal__button-disabled {
+  color: #b6bcbf;
+  background-color: #e6e8eb;
+}
+
+.modal__error {
+  color: #ff0000;
+  position: relative;
+  top: -15px;
+}
+
+@media screen and (max-width: 345px) {
+  .modal__error {
+    font-size: xx-small;
+  }
+}

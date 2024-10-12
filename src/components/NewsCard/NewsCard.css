@@ -2,7 +2,7 @@
   background-color: white;
   border-radius: 25px;
   overflow: hidden;
-  max-width: 335px;
+  max-width: 400px;
   min-height: 576px;
   position: relative;
 }
@@ -156,7 +156,7 @@
   color: #b6bcbf;
 }
 
-@media screen and (max-device-width: 360px) {
+@media screen and (max-width: 345px) {
   .card__container {
     width: 100%;
   }
@@ -204,7 +204,7 @@
   }
 }
 
-@media screen and (min-device-width: 362px) and (max-device-width: 768px) {
+@media screen and (min-device-width: 346px) and (max-device-width: 768px) {
   .card__container {
     border-radius: 14px;
     width: 190px;

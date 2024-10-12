@@ -27,7 +27,7 @@ function Main({
 
   return (
     <main>
-      <section className="header__section">
+      <section>
         <Header
           handleOpenLoginModal={handleOpenLoginModal}
           handleOpenMobileMenuModal={handleOpenMobileMenuModal}
@@ -35,7 +35,7 @@ function Main({
           isLoggedIn={isLoggedIn}
         />
       </section>
-      <section className="card__section">
+      <section>
         {isLoading && <Preloader />}
         {!isLoading &&
         hasSearched &&
@@ -61,7 +61,7 @@ function Main({
           ""
         )}
       </section>
-      <section className="about__section">
+      <section>
         <About />
       </section>
     </main>

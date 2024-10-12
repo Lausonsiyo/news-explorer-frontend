@@ -12,13 +12,13 @@ const SavedNews = ({
 }) => {
   return (
     <>
-      <section className="savedNews__header-section">
+      <section>
         <SavedNewsHeader
           handleOpenMobileMenuModal={handleOpenMobileMenuModal}
           isLoggedIn={isLoggedIn}
         />
       </section>
-      <section className="savedNews__cards-section">
+      <section>
         <SavedNewsCardList handleRemoveArticle={handleRemoveArticle} />
       </section>
     </>

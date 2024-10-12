@@ -54,3 +54,16 @@
   box-sizing: border-box;
   border-radius: 20px;
 }
+
+@media screen and (max-width: 345px) {
+  .modal {
+    /* max-width: 320px; */
+  }
+
+  .modal__content {
+    max-width: 320px;
+  }
+}
+
+@media screen and (min-device-width: 346px) and (max-device-width: 768px) {
+}

@@ -112,7 +112,7 @@
   display: block;
   background-size: cover;
   position: absolute;
-  top: 24px;
+  top: 18px;
   right: 24px;
   width: 24px;
   height: 24px;
@@ -153,9 +153,10 @@
   justify-content: space-between;
 }
 
-@media screen and (min-device-width: 362px) and (max-device-width: 768px) {
+@media screen and (min-device-width: 346px) and (max-device-width: 768px) {
   .navigation {
     height: 66px;
+    justify-content: space-around;
   }
 
   .navigation__logo-text {
@@ -183,13 +184,14 @@
   }
 }
 
-@media screen and (max-device-width: 360px) {
+@media screen and (max-width: 345px) {
   .navigation {
     align-items: center;
     height: 56px;
   }
   .navigation__button-container {
     visibility: hidden;
+    display: none;
   }
 
   .navigation__logo-text {

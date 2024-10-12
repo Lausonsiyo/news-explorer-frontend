@@ -27,6 +27,7 @@ function NewsCardLists({
 
   return (
     <section className="newscards__section">
+      
       {hasSearched ? (
         <>
           <h2 className="newscards__title">Search results</h2>

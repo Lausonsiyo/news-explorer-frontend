@@ -94,7 +94,7 @@ function Navigation({
           </button>
         )}
       </nav>
-      <MediaQuery maxWidth={360}>
+      <MediaQuery maxWidth={345}>
         <nav className="navigation__button-container-mobile">
           <button
             className={`navigation__button_menu ${

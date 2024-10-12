@@ -8,16 +8,16 @@
   padding: 0 20px;
 }
 
-@media screen and (min-device-width: 362px) and (max-device-width: 768px) {
+@media screen and (min-device-width: 346px) and (max-device-width: 768px) {
   .App__content {
     max-width: 768px;
     height: 400px;
   }
 }
 
-@media screen and (max-device-width: 360px) {
+@media screen and (max-width: 345px) {
   .App__content {
-    max-width: 360px;
+    max-width: 320px;
     height: 400px;
     padding: 0;
   }
