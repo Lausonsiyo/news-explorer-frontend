@@ -54,6 +54,7 @@
   font-weight: 400;
   color: #ff0000;
   margin-left: 20px;
+  position: absolute;
 }
 
 .searchform__searchbar-button {

@@ -9,6 +9,8 @@ import { useContext } from "react";
 import { CurrentPageContext } from "../../context/CurrentPageContext";
 import { KeywordContext } from "../../context/KeywordContext";
 
+/* UTILS IMPORTS */
+
 function NewsCard({
   newsData,
   isLoggedIn,
@@ -29,10 +31,8 @@ function NewsCard({
       year: "numeric",
     }
   );
-  console.log(isLoggedIn);
 
   const handleBookmarkClick = () => {
-    console.log("bookmark clicked");
     setIsBookmarked(!isBookmarked);
     const token = localStorage.getItem("jwt");
     handleSaveArticle({ newsData, keyword, token });
@@ -41,15 +41,17 @@ function NewsCard({
   const handleRemoveClick = () => {
     console.log("Remove card clicked");
 
-    const token = localStorage.getItem("jwt");
-    handleRemoveArticle({ newsData, token });
+    // const token = localStorage.getItem("jwt");
+    // handleRemoveArticle({ newsData, token });
   };
 
   return (
     <article className="card__container">
-      {currentPage === "/saved-news" && (
+      {currentPage === "/saved-news" ? (
         <>
-          <div className="card__keyword">{/* {newsData.keyword} */}</div>
+          <div className="card__keyword">
+            {/* {newsData.keyword} */} KEYWORD
+          </div>
 
           <div
             className={`card__popup-text ${
@@ -69,34 +71,36 @@ function NewsCard({
             }}
           />
         </>
-      )}
-
-      {isLoggedIn ? (
-        <button
-          className={`card__button-bookmark ${
-            isBookmarked ? "card__button-bookmark_marked" : ""
-          }`}
-          onClick={handleBookmarkClick}
-        />
       ) : (
         <>
-          <div
-            className={`card__popup-text ${
-              isHovered ? "" : "card__popup-text_hidden"
-            }`}
-          >
-            Sign in to save articles
-          </div>
-          <button
-            className="card__button-bookmark"
-            onClick={handleOpenLoginModal}
-            onMouseEnter={() => {
-              setIsHovered(true);
-            }}
-            onMouseLeave={() => {
-              setIsHovered(false);
-            }}
-          />
+          {isLoggedIn ? (
+            <button
+              className={`card__button-bookmark ${
+                isBookmarked ? "card__button-bookmark_marked" : ""
+              }`}
+              onClick={handleBookmarkClick}
+            />
+          ) : (
+            <>
+              <div
+                className={`card__popup-text ${
+                  isHovered ? "" : "card__popup-text_hidden"
+                }`}
+              >
+                Sign in to save articles
+              </div>
+              <button
+                className="card__button-bookmark"
+                onClick={handleOpenLoginModal}
+                onMouseEnter={() => {
+                  setIsHovered(true);
+                }}
+                onMouseLeave={() => {
+                  setIsHovered(false);
+                }}
+              />
+            </>
+          )}
         </>
       )}
 
