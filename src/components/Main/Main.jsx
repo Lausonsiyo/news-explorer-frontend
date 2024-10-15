@@ -26,45 +26,46 @@ function Main({
   const { searchResults } = useContext(SearchResultContext);
 
   return (
-    <main>
-      <section>
-        <Header
-          handleOpenLoginModal={handleOpenLoginModal}
-          handleOpenMobileMenuModal={handleOpenMobileMenuModal}
-          handleSearch={handleSearch}
-          isLoggedIn={isLoggedIn}
-        />
-      </section>
-      <section>
-        {isLoading && <Preloader />}
-        {!isLoading &&
-        hasSearched &&
-        Array.isArray(searchResults) &&
-        searchResults.length > 0 ? (
-          <NewsCardLists
-            handleOpenLoginModal={handleOpenLoginModal}
-            isLoggedIn={isLoggedIn}
-            handleRemoveArticle={handleRemoveArticle}
-            handleSaveArticle={handleSaveArticle}
-          />
-        ) : !isLoading &&
+    <>
+      <Header
+        handleOpenLoginModal={handleOpenLoginModal}
+        handleOpenMobileMenuModal={handleOpenMobileMenuModal}
+        handleSearch={handleSearch}
+        isLoggedIn={isLoggedIn}
+      />
+      <main>
+        <section>
+          {isLoading && <Preloader />}
+          {!isLoading &&
           hasSearched &&
           Array.isArray(searchResults) &&
-          searchResults.length === 0 ? (
-          <NotFound />
-        ) : searchError === true ? (
-          <p>
-            Sorry, something went wrong during the request. There may be a
-            connection issue or the server may be down. Please try again later.
-          </p>
-        ) : (
-          ""
-        )}
-      </section>
-      <section>
-        <About />
-      </section>
-    </main>
+          searchResults.length > 0 ? (
+            <NewsCardLists
+              handleOpenLoginModal={handleOpenLoginModal}
+              isLoggedIn={isLoggedIn}
+              handleRemoveArticle={handleRemoveArticle}
+              handleSaveArticle={handleSaveArticle}
+            />
+          ) : !isLoading &&
+            hasSearched &&
+            Array.isArray(searchResults) &&
+            searchResults.length === 0 ? (
+            <NotFound />
+          ) : searchError === true ? (
+            <p>
+              Sorry, something went wrong during the request. There may be a
+              connection issue or the server may be down. Please try again
+              later.
+            </p>
+          ) : (
+            ""
+          )}
+        </section>
+        <section>
+          <About />
+        </section>
+      </main>
+    </>
   );
 }
 export default Main;

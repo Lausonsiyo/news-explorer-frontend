@@ -20,7 +20,7 @@ function NewsCard({
 }) {
   const [isHovered, setIsHovered] = useState(false);
   const [isBookmarked, setIsBookmarked] = useState(false);
-  const { currentPage, setCurrentPage } = useContext(CurrentPageContext);
+  const { currentPage /* setCurrentPage  */ } = useContext(CurrentPageContext);
   const { keyword } = useContext(KeywordContext);
 
   const formattedDate = new Date(newsData.publishedAt).toLocaleString(

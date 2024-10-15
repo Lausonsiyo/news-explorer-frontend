@@ -14,7 +14,7 @@ import {
   getSavedArticles,
 } from "../../utils/api";
 
-import { checkToken, authorization } from "../../utils/auth";
+import { checkToken /* authorization */ } from "../../utils/auth";
 
 /* CONTEXT PROVIDERS IMPORTS */
 import { CurrentPageContext } from "../../context/CurrentPageContext";
@@ -40,8 +40,8 @@ function App() {
   /* INITIAL CONTEXTS-/-USESTATE HOOKS  */
   const [currentUser, setCurrentUser] = useState({});
   const [activeModal, setActiveModal] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [serverError, setServerError] = useState(null);
+  const [isLoading /* setIsLoading */] = useState(false);
+  const [serverError /* setServerError */] = useState(null);
   const [isSearching, setIsSearching] = useState(false);
   const [hasSearched, setHasSearched] = useState(false);
   const [searchError, setSearchError] = useState(false);
@@ -85,9 +85,9 @@ function App() {
     setActiveModal("");
   };
 
-  const handleSuccessModal = () => {
+  /*  const handleSuccessModal = () => {
     setActiveModal("successModal");
-  };
+  }; */
 
   const handleOpenLoginModal = () => {
     setActiveModal("login");
@@ -132,7 +132,7 @@ function App() {
   };
 
   /* UNIVERSAL HANDLE SUBMIT  */
-  const handleSubmit = (request) => {
+  /*   const handleSubmit = (request) => {
     setIsLoading(true);
     request()
       .then(() => {
@@ -150,7 +150,7 @@ function App() {
         setIsLoading(false);
       });
   };
-
+ */
   /* HANDLE REMOVE AND ADD FUNCTIONS */
   /* ADD */
   const handleSaveArticle = ({ newsData, keyword, token }) => {

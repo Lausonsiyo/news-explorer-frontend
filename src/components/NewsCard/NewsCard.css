@@ -2,7 +2,7 @@
   background-color: white;
   border-radius: 25px;
   overflow: hidden;
-  max-width: 400px;
+  max-width: 350px;
   min-height: 576px;
   position: relative;
 }
@@ -12,7 +12,7 @@
   padding: 8px 22px;
   text-align: center;
   font-family: "Roboto", Arial, sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   line-height: 1.7;
   color: black;
@@ -224,6 +224,7 @@
     border-radius: 14px;
     width: 190px;
     min-height: 420px;
+    max-width: 217px;
   }
 
   .card__button-bookmark {
@@ -266,5 +267,9 @@
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
+  }
+
+  .card__button-delete::before {
+    background-size: 65%;
   }
 }

@@ -19,7 +19,7 @@ function Footer() {
 
       <nav className="footer__nav">
         <ul className="footer__links">
-          <div className="footer__links_text-buttons">
+          <div className="footer__links-text-buttons">
             <li className="footer__list-item">
               <Link to="/">
                 <button className="footer__button" type="text">
@@ -38,7 +38,7 @@ function Footer() {
               </a>
             </li>
           </div>
-          <div className="footer__links_icons">
+          <div className="footer__links-icons">
             <li className="footer__list-item">
               <a
                 href="https://github.com/Lausonsiyo/"

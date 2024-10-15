@@ -10,7 +10,7 @@
   display: flex;
 }
 
-.footer__links_text-buttons {
+.footer__links-text-buttons {
   display: flex;
   gap: 24px;
 }
@@ -23,7 +23,7 @@
   margin: 0;
 }
 
-.footer__links_icons {
+.footer__links-icons {
   display: flex;
   gap: 20px;
 }
@@ -81,11 +81,11 @@
     gap: 115px;
   }
 
-  .footer__links_icons {
+  .footer__links-icons {
     align-self: self-start;
   }
 
-  .footer__links_text-buttons {
+  .footer__links-text-buttons {
     display: flex;
     flex-direction: column;
     gap: 24px;

@@ -7,12 +7,12 @@ import Modal from "../Modal/Modal";
 function SuccessModal({ handleCloseClick, isOpen, handleOpenLoginModal }) {
   return (
     <Modal onClose={handleCloseClick} isOpen={isOpen} name="successModal">
-      <div className="successModal__content">
-        <h2 className="successModal__title">
+      <div className="succes-modal__content">
+        <h2 className="succes-modal__title">
           Registration successfully completed!
         </h2>
         <button
-          className="successModal__button"
+          className="succes-modal__button"
           type="button"
           onClick={handleOpenLoginModal}
         >

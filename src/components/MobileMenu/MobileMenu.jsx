@@ -14,10 +14,10 @@ function MobileMenu({
   handleOpenLoginModal,
   isLoggedIn,
 }) {
-  const handleClick = (action) => {
-    action();
-    handleCloseClick();
-  };
+  // const handleClick = (action) => {
+  //   action();
+  //   handleCloseClick();
+  // };
 
   return (
     <MediaQuery maxWidth={345}>

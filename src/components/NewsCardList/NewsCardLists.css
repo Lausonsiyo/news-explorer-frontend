@@ -14,6 +14,10 @@
   color: black;
 }
 
+.newscards__button:hover {
+  background-color: rgba(232, 232, 232, 1);
+}
+
 .newscards__container {
   display: flex;
   flex-direction: row;

@@ -71,7 +71,7 @@ function Navigation({
                 } `}
               type="button" /* onClick={handleLogout} */
             >
-              <p className="navigation__button-logout-userName ">
+              <p className="navigation__button-logout-username ">
                 {(currentUser && currentUser.name) || "Logout"}
               </p>
               <img

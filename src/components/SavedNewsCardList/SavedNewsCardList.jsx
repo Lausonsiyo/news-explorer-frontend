@@ -2,18 +2,18 @@
 import "./SavedNewsCardList.css";
 
 /* REACT DEPENDENCIES */
-import { useContext } from "react";
+// import { useContext } from "react";
 
 /* COMPONENTS IMPORTS */
 import NewsCard from "../NewsCard/NewsCard";
 
 /* CONTEXT IMPORTS */
-import { SavedArticlesContext } from "../../context/SavedArticlesContext";
-import { CurrentUserContext } from "../../context/CurrentUserContext";
+// import { SavedArticlesContext } from "../../context/SavedArticlesContext";
+// import { CurrentUserContext } from "../../context/CurrentUserContext";
 
 const SavedNewsCardList = ({ handleRemoveArticle }) => {
-  const { savedArticles } = useContext(SavedArticlesContext);
-  const { currentUser } = useContext(CurrentUserContext);
+  // const { savedArticles } = useContext(SavedArticlesContext);
+  // const { currentUser } = useContext(CurrentUserContext);
 
   const sampleData = [
     {
@@ -42,7 +42,7 @@ const SavedNewsCardList = ({ handleRemoveArticle }) => {
       title: "Apple Prepares to Unveil New Products",
       url: "https://www.techcrunch.com/apple-unveils-new-products/",
       urlToImage:
-        "https://techcrunch.com/wp-content/uploads/2024/10/apple_event.jpg",
+        "https://media.istockphoto.com/id/1352603244/photo/shot-of-an-unrecognizable-businessman-working-on-his-laptop-in-the-office.jpg?s=2048x2048&w=is&k=20&c=ToF4ypeort99bztOWcUOCmlzyPIHkWyVJEDAypeh6vc=",
       keyword: "Apple",
       _id: "9876543210",
     },
@@ -56,7 +56,8 @@ const SavedNewsCardList = ({ handleRemoveArticle }) => {
       source: { id: "google", name: "Google" },
       title: "Google Updates Search Engine with New Features",
       url: "https://www.google.com/search-update/",
-      urlToImage: "https://www.google.com/search-update/image.jpg",
+      urlToImage:
+        "https://media.istockphoto.com/id/1582372535/photo/metallic-magnifier-symbols-illuminated-by-blue-and-pink-lights-on-blue-and-pink-background.jpg?s=2048x2048&w=is&k=20&c=M96ku7_aNK9ebFgE632TVlhZXTXxMUx3faD05fmfM54=",
       keyword: "Google",
       _id: "1111111111",
     },

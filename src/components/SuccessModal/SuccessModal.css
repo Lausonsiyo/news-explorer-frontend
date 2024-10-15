@@ -1,4 +1,4 @@
-.successModal__title {
+.succes-modal__title {
   font-family: "Roboto", Arial, sans-serif;
   font-size: 24px;
   font-weight: 900;
@@ -6,7 +6,7 @@
   text-align: left;
 }
 
-.successModal__button {
+.succes-modal__button {
   font-family: "Inter", Arial, sans-serif;
   font-size: 18px;
   font-weight: 400;
