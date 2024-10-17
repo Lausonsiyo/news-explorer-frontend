@@ -3,12 +3,23 @@ import "./Header.css";
 
 /* COMPONENT IMPORTS */
 import Navigation from "../Navigation/Navigation";
+import SearchForm from "../SearchForm/SearchForm";
 
-function Header({ handleOpenLoginModal }) {
+function Header({
+  handleOpenLoginModal,
+  handleOpenMobileMenuModal,
+  handleSearch,
+  isLoggedIn,
+}) {
   return (
-    <div className="header">
-      <Navigation handleOpenLoginModal={handleOpenLoginModal} />
-    </div>
+    <header className="header">
+      <Navigation
+        handleOpenLoginModal={handleOpenLoginModal}
+        handleOpenMobileMenuModal={handleOpenMobileMenuModal}
+        isLoggedIn={isLoggedIn}
+      />
+      <SearchForm handleSearch={handleSearch} />
+    </header>
   );
 }
 

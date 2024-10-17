@@ -4,19 +4,20 @@
   height: 576px;
   background-color: transparent;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
-@media screen and (min-device-width: 360px) and (max-device-width: 768px) {
+@media screen and (min-device-width: 590px) and (max-device-width: 960px) {
   .header {
     max-width: 768px;
     height: 400px;
+    background-size: cover;
   }
 }
 
-@media screen and (max-device-width: 360px) {
+@media screen and (min-device-width: 320px) and (max-device-width: 534px) {
   .header {
-    /* max-width: 320px; */
+    max-width: 320px;
     height: 536px;
     background-size: cover;
     background-position: center;

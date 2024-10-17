@@ -4,7 +4,7 @@
   border-radius: 35px;
   background: rgba(47, 113, 229, 1);
   border: none;
-
+  justify-content: center;
   font-family: Roboto;
   font-size: 18px;
   font-weight: 500;
@@ -13,4 +13,38 @@
   text-decoration: none;
   color: rgba(255, 255, 255, 1);
   font-family: "Roboto", Arial, sans-serif;
+}
+
+.modal__alt-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.modal__alt-button {
+  background-color: transparent;
+  border: none;
+  color: rgba(47, 113, 229, 1);
+}
+
+.modal__submit-container {
+  display: flex;
+  justify-content: center;
+}
+
+.modal__button-disabled {
+  color: #b6bcbf;
+  background-color: #e6e8eb;
+}
+
+.modal__error {
+  color: #ff0000;
+  position: relative;
+  top: -15px;
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 534px) {
+  .modal__error {
+    font-size: xx-small;
+  }
 }

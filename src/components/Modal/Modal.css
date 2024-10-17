@@ -30,13 +30,11 @@
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
-  opacity: 0.3;
-  transition: ease-in-out 0.4s;
 }
 
-.modal__close:hover {
+/* .modal__close:hover {
   opacity: 1;
-}
+} */
 
 .modal_opened {
   visibility: visible;
@@ -53,4 +51,17 @@
   height: fit-content;
   box-sizing: border-box;
   border-radius: 20px;
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 534px) {
+  .modal {
+    /* max-width: 320px; */
+  }
+
+  .modal__content {
+    max-width: 320px;
+  }
+}
+
+@media screen and (min-device-width: 590px) and (max-device-width: 960px) {
 }
