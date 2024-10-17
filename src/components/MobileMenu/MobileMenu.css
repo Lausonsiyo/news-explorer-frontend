@@ -12,13 +12,13 @@
   margin: 0;
   padding: 16px 0 16px 16px;
 }
-.modal__content_type_mobileModal {
+.modal__content_type_mobile-modal {
   padding: 0;
   border-radius: 0 0 20px 20px;
   background: rgba(26, 27, 34, 1);
 }
 
-.modal__type_mobileModal {
+.modal__type_mobile-modal {
   color: rgba(255, 255, 255, 1);
   align-items: baseline;
 }
@@ -79,7 +79,7 @@
   padding-left: 16px;
 }
 
-.modal__close_type_mobileModal {
+.modal__close_type_mobile-modal {
   height: 24px;
   width: 24px;
   top: 17px;

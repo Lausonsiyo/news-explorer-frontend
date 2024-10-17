@@ -83,7 +83,7 @@
   background-color: #2a65cc;
 }
 
-@media screen and (min-device-width: 346px) and (max-device-width: 768px) {
+@media screen and (min-device-width: 590px) and (max-device-width: 960px) {
   .searchform {
     margin: 38px auto 48px;
   }
@@ -119,7 +119,7 @@
   }
 }
 
-@media screen and (max-width: 345px) {
+@media screen and (min-device-width: 320px) and (max-device-width: 534px) {
   .searchform {
     margin: 30px auto 32px;
   }

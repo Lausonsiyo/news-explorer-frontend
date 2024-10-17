@@ -25,20 +25,20 @@
   margin-bottom: 39px;
 }
 
-.modal__content_type_loginModal {
+.modal__content_type_login-modal {
   max-height: fit-content;
 }
 
-@media screen and (max-width: 345px) {
-  .modal__type_loginModal {
+@media screen and (min-device-width: 320px) and (max-device-width: 534px) {
+  .modal__type_login-modal {
     align-items: flex-end;
   }
 
-  .modal__content_type_loginModal {
+  .modal__content_type_login-modal {
     border-radius: 20px 20px 0 0;
   }
 
-  .modal__close_type_loginModal {
+  .modal__close_type_login-modal {
     right: 0;
     width: 24px;
     height: 24px;

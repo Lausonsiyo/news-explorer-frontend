@@ -5,13 +5,13 @@
   padding: 0 50px;
 }
 
-@media screen and (min-device-width: 346px) and (max-device-width: 768px) {
+@media screen and (min-device-width: 590px) and (max-device-width: 960px) {
   .savednews-newscards__container {
     padding: 0 25px;
   }
 }
 
-@media screen and (max-width: 345px) {
+@media screen and (min-device-width: 320px) and (max-device-width: 534px) {
   .savednews-newscards__container {
     display: flex;
     flex-direction: row;

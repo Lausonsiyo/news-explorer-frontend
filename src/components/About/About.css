@@ -39,7 +39,7 @@
   font-weight: 400;
 }
 
-@media screen and (min-device-width: 346px) and (max-device-width: 768px) {
+@media screen and (min-device-width: 590px) and (max-device-width: 960px) {
   .about {
     padding: 0 40px;
     display: block;
@@ -66,7 +66,7 @@
   }
 }
 
-@media screen and (max-width: 345px) {
+@media screen and (min-device-width: 320px) and (max-device-width: 534px) {
   .about__container {
     display: flex;
     align-items: center;

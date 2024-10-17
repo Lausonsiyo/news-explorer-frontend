@@ -111,9 +111,7 @@
   background: transparent url(../../assets/images/mobile_menu_icon.svg);
   display: block;
   background-size: cover;
-  position: absolute;
-  top: 18px;
-  right: 24px;
+
   width: 24px;
   height: 24px;
   border: none;
@@ -153,14 +151,18 @@
   justify-content: space-between;
 }
 
-@media screen and (min-device-width: 346px) and (max-device-width: 768px) {
+.navigation__button-container-mobile {
+  padding-right: 10px;
+}
+
+@media screen and (min-device-width: 590px) and (max-device-width: 960px) {
   .navigation {
     height: 66px;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   .navigation__logo-text {
-    padding: 22px 0 0 0;
+    padding: 22px 0 0 40px;
   }
 
   .navigation__button-home {
@@ -175,16 +177,22 @@
 
   .navigation__button-container {
     font-size: 16px;
-    padding-right: 10px;
-    gap: 0px;
+    padding-right: 40px;
+    gap: 15px;
   }
 
   .navigation__button-saved-news {
     height: 68px;
   }
+
+  .navigation__button-logout {
+    max-width: 100px;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
-@media screen and (max-width: 345px) {
+@media screen and (min-device-width: 320px) and (max-device-width: 534px) {
   .navigation {
     align-items: center;
     height: 56px;
@@ -207,6 +215,10 @@
 
   .navigation__logo-text_black {
     color: black;
-    padding: 0;
+    padding: 0 0 0 16px;
+  }
+
+  .navigation__button-container-mobile {
+    display: block;
   }
 }

@@ -17,7 +17,7 @@ function LoginModal({ handleCloseClick, isOpen, handleAltClick }) {
     <ModalWithForm
       buttonText="Sing In"
       title="Sing In"
-      formName="loginModal"
+      formName="login-modal"
       onClose={handleCloseClick}
       isOpen={isOpen}
       altButtonText={"Sing Up"}

@@ -55,7 +55,7 @@
   padding: 0;
 }
 
-@media screen and (min-device-width: 346px) and (max-device-width: 768px) {
+@media screen and (min-device-width: 590px) and (max-device-width: 960px) {
   .footer {
     padding: 24px 40px;
   }
@@ -65,7 +65,7 @@
   }
 }
 
-@media screen and (max-width: 345px) {
+@media screen and (min-device-width: 320px) and (max-device-width: 534px) {
   .footer {
     padding: 20px 16px 22px;
     flex-direction: column-reverse;

@@ -8,14 +8,14 @@
   padding: 0 20px;
 }
 
-@media screen and (min-device-width: 346px) and (max-device-width: 768px) {
+@media screen and (min-device-width: 590px) and (max-device-width: 960px) {
   .App__content {
     max-width: 768px;
     height: 400px;
   }
 }
 
-@media screen and (max-width: 345px) {
+@media screen and (min-device-width: 320px) and (max-device-width: 534px) {
   .App__content {
     max-width: 320px;
     height: 400px;

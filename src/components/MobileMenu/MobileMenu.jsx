@@ -20,8 +20,8 @@ function MobileMenu({
   // };
 
   return (
-    <MediaQuery maxWidth={345}>
-      <Modal name="mobileModal" onClose={handleCloseClick} isOpen={isOpen}>
+    <MediaQuery maxWidth={715}>
+      <Modal name="mobile-modal" onClose={handleCloseClick} isOpen={isOpen}>
         <div className="mobile-menu">
           <div className="mobile-menu__header">
             <h2 className="mobile-menu__logo-text">NewsExplorer</h2>

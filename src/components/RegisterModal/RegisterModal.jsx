@@ -17,7 +17,7 @@ function RegisterModal({ handleCloseClick, isOpen, handleAltClick }) {
     <ModalWithForm
       buttonText="Sing Up"
       title="Sing Up"
-      formName="registerModal"
+      formName="register-modal"
       onClose={handleCloseClick}
       isOpen={isOpen}
       altButtonText={"Sing In"}

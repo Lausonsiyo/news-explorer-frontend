@@ -36,14 +36,14 @@
   }
 }
 
-@media screen and (max-width: 345px) {
+@media screen and (min-device-width: 320px) and (max-device-width: 534px) {
   .preloader {
     height: 282px;
     max-width: 270px;
   }
 }
 
-@media screen and (min-device-width: 346px) and (max-device-width: 768px) {
+@media screen and (min-device-width: 590px) and (max-device-width: 960px) {
   .preloader {
     max-width: 650px;
     height: 282px;

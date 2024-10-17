@@ -117,8 +117,6 @@ function App() {
     setIsSearching(true);
     handleSearchResponse(keyword)
       .then((res) => {
-        console.log(res.articles);
-
         setSearchResults(res.articles);
         setHasSearched(true);
         setIsSearching(false);

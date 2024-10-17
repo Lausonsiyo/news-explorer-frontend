@@ -43,7 +43,7 @@
   top: -15px;
 }
 
-@media screen and (max-width: 345px) {
+@media screen and (min-device-width: 320px) and (max-device-width: 534px) {
   .modal__error {
     font-size: xx-small;
   }

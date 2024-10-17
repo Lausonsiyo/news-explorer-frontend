@@ -148,6 +148,7 @@
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .card__content {
@@ -161,6 +162,7 @@
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
 }
 
 .card__source {
@@ -171,9 +173,10 @@
   color: #b6bcbf;
 }
 
-@media screen and (max-width: 345px) {
+@media screen and (min-device-width: 320px) and (max-device-width: 534px) {
   .card__container {
     width: 100%;
+    min-height: 444px;
   }
 
   .card__button-bookmark {
@@ -219,12 +222,11 @@
   }
 }
 
-@media screen and (min-device-width: 346px) and (max-device-width: 768px) {
+@media screen and (min-device-width: 590px) and (max-device-width: 960px) {
   .card__container {
     border-radius: 14px;
-    width: 190px;
     min-height: 420px;
-    max-width: 217px;
+    max-width: 224px;
   }
 
   .card__button-bookmark {
@@ -271,5 +273,11 @@
 
   .card__button-delete::before {
     background-size: 65%;
+  }
+
+  .card__popup-text {
+    font-size: 10px;
+    top: 10px;
+    right: 55px;
   }
 }
