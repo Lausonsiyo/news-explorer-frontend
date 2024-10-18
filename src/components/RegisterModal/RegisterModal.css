@@ -2,8 +2,8 @@
   max-height: fit-content;
 }
 
-@media screen and (min-device-width: 320px) and (max-device-width: 534px) {
-  .modal__type_register-modal {
+@media screen and (min-device-width: 320px) and (max-device-width: 589px) {
+  .modal_type_register-modal {
     align-items: flex-end;
   }
 

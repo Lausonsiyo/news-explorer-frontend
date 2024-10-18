@@ -36,7 +36,7 @@
   }
 }
 
-@media screen and (min-device-width: 320px) and (max-device-width: 534px) {
+@media screen and (min-device-width: 320px) and (max-device-width: 589px) {
   .preloader {
     height: 282px;
     max-width: 270px;

@@ -173,7 +173,7 @@
   color: #b6bcbf;
 }
 
-@media screen and (min-device-width: 320px) and (max-device-width: 534px) {
+@media screen and (min-device-width: 320px) and (max-device-width: 589px) {
   .card__container {
     width: 100%;
     min-height: 444px;

@@ -192,7 +192,7 @@
   }
 }
 
-@media screen and (min-device-width: 320px) and (max-device-width: 534px) {
+@media screen and (min-device-width: 320px) and (max-device-width: 589px) {
   .navigation {
     align-items: center;
     height: 56px;

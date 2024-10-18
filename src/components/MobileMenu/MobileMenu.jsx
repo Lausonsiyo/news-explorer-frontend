@@ -20,7 +20,7 @@ function MobileMenu({
   // };
 
   return (
-    <MediaQuery maxWidth={715}>
+    <MediaQuery maxWidth={775}>
       <Modal name="mobile-modal" onClose={handleCloseClick} isOpen={isOpen}>
         <div className="mobile-menu">
           <div className="mobile-menu__header">

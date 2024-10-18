@@ -15,7 +15,7 @@
   }
 }
 
-@media screen and (min-device-width: 320px) and (max-device-width: 534px) {
+@media screen and (min-device-width: 320px) and (max-device-width: 589px) {
   .App__content {
     max-width: 320px;
     height: 400px;

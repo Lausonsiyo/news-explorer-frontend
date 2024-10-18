@@ -30,7 +30,7 @@
   margin: 0px;
 }
 
-@media screen and (min-device-width: 320px) and (max-device-width: 534px) -device-width: {
+@media screen and (min-device-width: 320px) and (max-device-width: 589px) -device-width: {
   .not-found {
     padding: 48px 0;
   }
