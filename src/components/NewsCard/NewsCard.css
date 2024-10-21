@@ -2,7 +2,7 @@
   background-color: white;
   border-radius: 25px;
   overflow: hidden;
-  max-width: 350px;
+  max-width: 400px;
   min-height: 576px;
   position: relative;
 }
@@ -176,7 +176,8 @@
 @media screen and (min-device-width: 320px) and (max-device-width: 589px) {
   .card__container {
     width: 100%;
-    min-height: 444px;
+    height: 440px;
+    min-height: fit-content;
   }
 
   .card__button-bookmark {
@@ -191,6 +192,7 @@
 
   .card__title {
     height: 48px;
+    margin-top: 5px;
   }
 
   .card__content {
@@ -211,6 +213,7 @@
 
   .card__date-published {
     margin-top: 16px;
+    margin-bottom: 0;
   }
 
   .card__source {
@@ -232,6 +235,10 @@
   .card__button-bookmark {
     top: 8px;
     right: 8px;
+  }
+
+  .card__button-bookmark::before {
+    background-size: 6;
   }
 
   .card__image {

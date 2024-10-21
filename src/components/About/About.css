@@ -12,13 +12,17 @@
 }
 
 .about__avatar-image {
-  width: 464px;
-  height: 464px;
+  width: 465px;
+  height: 465px;
   border-radius: 50%;
+  position: relative;
+  top: 0px;
+  left: 50px;
 }
 
 .about__text {
-  margin-left: 56px;
+  margin-top: 10px;
+  margin-left: 103px;
   max-width: 600px;
   display: flex;
   flex-direction: column;
@@ -30,6 +34,7 @@
   font-size: 40px;
   line-height: 46px;
   font-weight: 400;
+  margin: 10px 0 0 0;
 }
 
 .about__text-bio {
@@ -46,12 +51,16 @@
   }
 
   .about__avatar-image {
-    width: 272px;
-    height: 272px;
+    width: 232px;
+    height: 232px;
+    top: -40px;
+    left: 0;
   }
 
   .about__text {
     margin-left: 32px;
+    max-width: 424px;
+    justify-content: space-between;
   }
 
   .about__text-author {
@@ -77,6 +86,7 @@
     width: 272px;
     height: 272px;
     border-radius: 50%;
+    left: 0;
   }
 
   .about__text-author {

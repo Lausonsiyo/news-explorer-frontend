@@ -125,17 +125,16 @@
   }
 
   .searchform__container {
-    width: 265px;
+    max-width: 285px;
   }
 
   .searchform__text-subheading {
-    margin-bottom: 88px;
+    margin-bottom: 120px;
   }
 
   .searchform__searchbar-input {
-    width: 250px;
+    width: 288px;
     height: 56px;
-    margin-bottom: 16px;
     padding: 17px 16px;
   }
 
@@ -147,9 +146,9 @@
 
   .searchform__searchbar-button {
     position: relative;
-    top: 8px;
+    top: 15px;
     left: 0px;
-    width: 250px;
+    width: 288px;
     height: 56px;
     padding: 0;
   }

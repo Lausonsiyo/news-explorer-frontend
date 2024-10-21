@@ -6,7 +6,7 @@
 }
 
 .newscards__title {
-  margin: 0;
+  margin: 0 0 0 40px;
   font-family: "Roboto-Slab", Arial, sans-serif;
   font-size: 40px;
   line-height: 46px;
@@ -22,11 +22,10 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin: 64px 0;
+  justify-content: center;
   list-style: none;
   padding: 0;
-  margin: 64px auto;
+  margin: 60px auto;
   row-gap: 16px;
   column-gap: 16px;
   width: -webkit-fill-available;
@@ -64,11 +63,22 @@
 
   .newscards__container {
     gap: 8px;
-    margin: 32px 0;
+    margin: 28px 0;
   }
 
   .newscards__item {
     width: fit-content;
+  }
+
+  .newscards__title {
+    margin: 10px 0px 0px 23px;
+    font-size: 30px;
+    line-height: 34px;
+  }
+
+  .newscards__button {
+    width: 240px;
+    height: 56px;
   }
 }
 
@@ -86,10 +96,12 @@
     line-height: 34px;
     text-align: left;
     padding: 32px 0 58px 0;
+    margin: 0;
   }
 
   .newscards__container {
     margin: 0;
+    row-gap: 10px;
   }
 
   .newscards__button {
