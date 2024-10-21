@@ -13,24 +13,36 @@ function ModalWithForm({
   isOpen,
   onClose,
   isLoading,
+  altButtonText,
+  handleAltClick,
+  isDisabled,
 }) {
   return (
     <Modal isOpen={isOpen} onClose={onClose} name={formName}>
       <h2 className="modal__title">{title}</h2>
       <form className="modal__form" onSubmit={onSubmit}>
         {children}
-        <button className="modal__submit" type="submit">
-          {isLoading ? "Saving..." : buttonText}
-        </button>
+        <div className="modal__submit-container">
+          <button
+            className={`modal__submit ${
+              isDisabled === true ? "modal__button-disabled" : ""
+            }`}
+            type="submit"
+            disabled={isDisabled}
+          >
+            {isLoading ? "Saving..." : buttonText}
+          </button>
+        </div>
         <div className="modal__alt-container">
-            <p>or</p>
-            <button
-              className="modal__alt-button"
-              type="button"
-              onClick={handleAltClick}
-            >
-              {altButtonText}
-            </button>
+          <p>or</p>
+          <button
+            className="modal__alt-button"
+            type="button"
+            onClick={handleAltClick}
+          >
+            {altButtonText}
+          </button>
+        </div>
       </form>
     </Modal>
   );
