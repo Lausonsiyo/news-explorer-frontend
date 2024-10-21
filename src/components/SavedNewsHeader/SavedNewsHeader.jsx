@@ -2,16 +2,16 @@
 import "./SavedNewsHeader.css";
 
 /* REACT DEPENDENCIES */
-import { useContext } from "react";
+// import { useContext } from "react";
 
 /* CONTEXT IMPORTS */
-import { CurrentUserContext } from "../../context/CurrentUserContext";
+// import { CurrentUserContext } from "../../context/CurrentUserContext";
 
 /* COMPONENTS IMPORTS */
 import Navigation from "../Navigation/Navigation";
 
 const SavedNewsHeader = ({ handleOpenMobileMenuModal, isLoggedIn }) => {
-  const { currentUser } = useContext(CurrentUserContext);
+  // const { currentUser } = useContext(CurrentUserContext);
 
   return (
     <div className="saved-news">
